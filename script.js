@@ -2,7 +2,7 @@ let humanScore = 0;
 let computerScore = 0;
 
 function getHumanChoice() {
-  const yourChoice = prompt("enter your choice:rock,paper,scissor");
+  const yourChoice = prompt("enter your choice: rock, paper or scissor");
   return yourChoice;
 }
 
@@ -37,7 +37,13 @@ function playRound(humanChoice, computerChoice) {
   }
 }
 
-function playGame(){
-    playRound(getHumanChoice(), getComputerChoice(choices));
+function playGame() {
+  playRound(getHumanChoice(), getComputerChoice(choices));
+  playRound(getHumanChoice(), getComputerChoice(choices));
+  playRound(getHumanChoice(), getComputerChoice(choices));
+  playRound(getHumanChoice(), getComputerChoice(choices));
+  playRound(getHumanChoice(), getComputerChoice(choices));
 }
 playGame();
+console.log("human score:" + humanScore);
+console.log("robot score:" + computerScore);
